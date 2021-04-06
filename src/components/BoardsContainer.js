@@ -1,14 +1,11 @@
 import React from "react";
 import TaskBoard from "./TaskBoard";
+import TaskInput from "./TaskInput";
 
 function BoardsContainer() {
   return (
     <div id="boards-container">
-      <form className="task-input">
-        <input name="title" />
-        <textarea name="content" placeholder="Write a task..." rows="3" />
-        <button>Add</button>
-      </form>
+      <TaskInput />
       <TaskBoard data="to-do-board" />
       <TaskBoard data="in-progress-board" />
       <TaskBoard data="completed-board" />

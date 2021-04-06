@@ -14,9 +14,15 @@
 .header-component {
   grid-area: header;
   background-color: rgb(112, 112, 255);
+  margin: 1%;
 }
 .board-like {
+  margin: 1%;
   flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
 }
 
 .task-input {
@@ -43,4 +49,12 @@
 .footer {
   grid-area: footer;
   background-color: rgb(168, 255, 117);
+  margin: 1%;
+  text-align: center;
+}
+
+.single-task {
+  background-color: orange;
+  margin: 2%;
+  flex-basis: 25%;
 }
