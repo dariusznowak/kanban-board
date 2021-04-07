@@ -5,7 +5,7 @@ import BoardsContainer from "./BoardsContainer";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Header />
       <BoardsContainer />
       <Footer />

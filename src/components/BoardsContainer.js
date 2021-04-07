@@ -4,11 +4,14 @@ import TaskInput from "./TaskInput";
 
 function BoardsContainer() {
   return (
-    <div id="boards-container">
+    <div className="boards-container">
       <TaskInput />
-      <TaskBoard data="to-do-board" />
-      <TaskBoard data="in-progress-board" />
-      <TaskBoard data="completed-board" />
+
+      <div className="boards">
+        <TaskBoard data="to-do-board" headingText={"To do"} />
+        <TaskBoard data="in-progress-board" headingText={"In progress"} />
+        <TaskBoard data="completed-board" headingText={"Completed"} />
+      </div>
     </div>
   );
 }

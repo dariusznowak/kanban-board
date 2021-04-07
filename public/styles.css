@@ -1,60 +1,90 @@
-#root {
+.app {
   display: grid;
-  grid-template-rows: "header boards footer";
+  grid-template:
+    "header-component"
+    " boards-container"
+    "footer";
 }
 
-#boards-container {
-  grid-area: boards;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  flex-direction: row;
-}
+/*header area*/
 
 .header-component {
-  grid-area: header;
-  background-color: rgb(112, 112, 255);
-  margin: 1%;
+  grid-area: header-component;
 }
-.board-like {
-  margin: 1%;
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  flex-direction: row;
+
+/*boards area*/
+
+.boards-container {
+  grid-area: boards-container;
+  display: grid;
+  grid-template:
+    "task-input"
+    "boards";
+  background-color: greenyellow;
 }
 
 .task-input {
+  grid-area: task-input;
+}
+
+.boards {
+  grid-area: boards;
+
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  margin: 1%;
+}
+
+.task-board {
+  display: flex;
   flex-direction: column;
+  justify-content: space-between;
+
+  min-width: 30%;
   margin: 1%;
-  margin-left: 20%;
-  margin-right: 20%;
-  width: 100%;
+  background-color: gray;
 }
 
-.to-do-board {
-  background-color: pink;
+.task-board-heading {
+  min-width: 100%;
 }
 
-.in-progress-board {
-  background-color: rgb(250, 126, 147);
-}
-.completed-board {
-  background-color: rgb(248, 20, 58);
-}
-
-.footer {
-  grid-area: footer;
-  background-color: rgb(168, 255, 117);
-  margin: 1%;
-  text-align: center;
+.board-like {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .single-task {
-  background-color: orange;
-  margin: 2%;
-  flex-basis: 25%;
+  width: 45%;
+  background-color: skyblue;
+  margin: 1%;
+  text-align: center;
+  font-size: calc(30px - 0.5vw);
+}
+
+.single-task button {
+}
+
+@media (max-width: 1200px) {
+  .boards {
+    flex-direction: column;
+  }
+
+  .task-board {
+    min-width: 80%;
+  }
+
+  .single-task {
+    min-width: 45%;
+    width: 22%;
+  }
+}
+
+/*footer area*/
+.footer {
+  grid-area: footer;
 }
