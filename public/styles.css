@@ -63,6 +63,7 @@ html {
 
 .task-board-heading {
   min-width: 100%;
+  text-align: center;
 }
 
 .board-like {
