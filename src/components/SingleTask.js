@@ -20,13 +20,19 @@ function SingleTask(props) {
       <p>{props.content}</p>
 
       {(props.data === "to-do-board" || props.data === "in-progress-board") && (
-        <button onClick={handleNextButton}>push next</button>
+        <button className="button button-next" onClick={handleNextButton}>
+          push next
+        </button>
       )}
       {(props.data === "in-progress-board" ||
         props.data === "completed-board") && (
-        <button onClick={handleBackButton}>push back</button>
+        <button className="button button-back" onClick={handleBackButton}>
+          push back
+        </button>
       )}
-      <button onClick={handleDeleteButton}>delete</button>
+      <button className="button button-delete" onClick={handleDeleteButton}>
+        delete
+      </button>
     </div>
   );
 }
