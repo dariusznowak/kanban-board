@@ -3,10 +3,7 @@ import React from "react";
 function SingleTask(props) {
   return (
     <div className="single-task">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque
-        molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
-      </p>
+      <p>{props.content}</p>
 
       {(props.data === "to-do-board" || props.data === "in-progress-board") && (
         <button>push next</button>

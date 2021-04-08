@@ -52,6 +52,7 @@ html {
   display: block;
 
   min-height: 30vw;
+  min-width: 25vw;
   margin: 1%;
   background: rgb(255, 255, 255);
 
@@ -91,6 +92,10 @@ html {
 
   .single-task {
     max-width: 32vw;
+  }
+
+  .task-board {
+    min-width: 60vw;
   }
 }
 
