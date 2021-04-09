@@ -10,18 +10,20 @@ function TaskInput(props) {
   function submitNote(event) {
     props.onAddTask(inputText);
     event.preventDefault();
+    setInputText("");
   }
 
   return (
     <div className="task-input">
       <form>
         <h2>Create a task</h2>
-        <input
+        <textarea
           onChange={handleChange}
           name="task-content"
-          placeholder="Write a task..."
+          rows="3"
           value={inputText}
-        />
+        ></textarea>
+
         <button onClick={submitNote}>Add</button>
       </form>
     </div>

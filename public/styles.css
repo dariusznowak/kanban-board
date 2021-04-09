@@ -1,8 +1,13 @@
 html {
   font-family: "Montserrat", sans-serif;
 }
+body {
+  margin: 0px;
+}
 
 .app {
+  background-image: url("https://images.pexels.com/photos/1363876/pexels-photo-1363876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  min-height: 100vh;
   display: grid;
   grid-template:
     "header-component"
@@ -13,9 +18,14 @@ html {
 /*header area*/
 
 .header-component {
+  display: flex;
+  align-items: center;
   grid-area: header-component;
-
-  text-align: center;
+  color: rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0.158);
+  padding-left: 5%;
+  text-align: left;
+  max-height: 20vh;
 }
 
 /*boards area*/
@@ -29,20 +39,55 @@ html {
 
   padding-left: 10%;
   padding-right: 10%;
-  background-color: #acc9eb;
 }
 
 .task-input {
   grid-area: task-input;
 
   text-align: center;
+  color: white;
+  margin-bottom: 2%;
+}
+
+.task-input form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.task-input h2 {
+  flex-basis: 100%;
+}
+
+.task-input textarea {
+  border-radius: 0.2rem;
+  border-color: #00000044;
+  width: 200px;
+  height: 50px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.task-input button {
+  font-size: 17px;
+  border-radius: 0.25em;
+  align-self: flex-end;
+  background-color: #00000041;
+  color: rgba(255, 255, 255, 0.459);
+  height: 40px;
+  width: 60px;
+  border-color: #0000003f;
+}
+
+.task-input input,
+button:hover {
+  background: rgba(0, 0, 0, 0.39);
+  color: rgba(255, 255, 255, 0.774);
 }
 
 .boards {
   grid-area: boards;
 
   display: flex;
-  justify-content: center;
   align-items: center;
 
   margin: 1%;
@@ -54,11 +99,12 @@ html {
   min-height: 30vw;
   min-width: 25vw;
   margin: 1%;
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.226);
 
   padding: 15x;
+  color: white;
   border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
+  box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.507);
 }
 
 .task-board-heading {
@@ -74,11 +120,12 @@ html {
 
 .single-task {
   max-width: 11vw;
-  background-color: #dabfc6;
+  background-color: #0000008a;
   margin: 2%;
   text-align: center;
   font-size: calc(25px - 0.5vw);
   border-radius: 2px;
+  padding: 1%;
 }
 
 @media (max-width: 1450px) {
@@ -102,7 +149,7 @@ html {
 }
 
 .single-task .button {
-  background-color: #66a2e6;
+  background-color: #00000041;
   border: 0.1em solid #000000;
   font-family: "Roboto", sans-serif;
   padding: 0.35em 1.2em;
@@ -115,12 +162,36 @@ html {
   transition: all 0.2s;
 }
 
+.button-delete {
+  background-image: url("../src/img/delete.png");
+}
+
+.button span {
+  color: rgba(255, 255, 255, 0.493);
+  font-size: 18px;
+}
+
 .single-task button:hover {
-  background-color: #2281ee;
+  background-color: #00000079;
+}
+
+.single-task button:hover .far {
+  color: rgb(255, 0, 0);
+}
+.single-task button:hover .fa-backward {
+  color: rgb(255, 238, 0);
+}
+
+.single-task button:hover .fa-check {
+  color: rgb(21, 255, 0);
 }
 
 /*footer area*/
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-area: footer;
-  text-align: center;
+  background: rgba(0, 0, 0, 0.158);
+  color: white;
 }

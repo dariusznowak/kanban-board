@@ -21,17 +21,17 @@ function SingleTask(props) {
 
       {(props.data === "to-do-board" || props.data === "in-progress-board") && (
         <button className="button button-next" onClick={handleNextButton}>
-          push next
+          <span class="fas fa-check" />
         </button>
       )}
       {(props.data === "in-progress-board" ||
         props.data === "completed-board") && (
         <button className="button button-back" onClick={handleBackButton}>
-          push back
+          <span class="fas fa-backward" />
         </button>
       )}
       <button className="button button-delete" onClick={handleDeleteButton}>
-        delete
+        <span class="far fa-trash-alt" />
       </button>
     </div>
   );
