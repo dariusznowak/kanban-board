@@ -88,7 +88,7 @@ button:hover {
   grid-area: boards;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   margin: 1%;
 }
@@ -100,6 +100,8 @@ button:hover {
   min-width: 25vw;
   margin: 1%;
   background: rgba(255, 255, 255, 0.226);
+
+  backdrop-filter: blur(5px);
 
   padding: 15x;
   color: white;
