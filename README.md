@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Kanban Board project using React.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+![alt text](https://github.com/dariusznowak/kanban-board/blob/main/src/img/screenshot.jpg?raw=true)
 
 
 In the project directory, you can run:
+
 
 ### `npm start`
 
