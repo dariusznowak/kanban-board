@@ -164,10 +164,6 @@ button:hover {
   transition: all 0.2s;
 }
 
-.button-delete {
-  background-image: url("../src/img/delete.png");
-}
-
 .button span {
   color: rgba(255, 255, 255, 0.493);
   font-size: 18px;
