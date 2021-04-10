@@ -89,7 +89,6 @@ button:hover {
 
   display: flex;
   align-items: flex-start;
-
   margin: 1%;
 }
 
@@ -139,6 +138,7 @@ button:hover {
 @media (max-width: 1200px) {
   .boards {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .single-task {
