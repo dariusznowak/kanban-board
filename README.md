@@ -1,5 +1,7 @@
 # Kanban Board project using React.js
 
+Check out [live demo HERE](https://dariusznowak.github.io/kanban-board/)
+
 ![alt text](https://github.com/dariusznowak/kanban-board/blob/main/src/img/screenshot.jpg?raw=true)
 
 
