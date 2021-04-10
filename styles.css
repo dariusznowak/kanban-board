@@ -25,7 +25,7 @@ body {
   background: rgba(0, 0, 0, 0.158);
   padding-left: 5%;
   text-align: left;
-  max-height: 20vh;
+  max-height: 7vh;
 }
 
 /*boards area*/
@@ -39,6 +39,7 @@ body {
 
   padding-left: 10%;
   padding-right: 10%;
+  padding-bottom: 8%;
 }
 
 .task-input {
@@ -188,8 +189,9 @@ button:hover {
 .footer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   grid-area: footer;
   background: rgba(0, 0, 0, 0.158);
   color: white;
+  padding-bottom: ;
 }
