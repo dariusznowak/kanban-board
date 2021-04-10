@@ -25,7 +25,7 @@ body {
   background: rgba(0, 0, 0, 0.158);
   padding-left: 5%;
   text-align: left;
-  max-height: 20vh;
+  max-height: 7vh;
 }
 
 /*boards area*/
@@ -39,6 +39,7 @@ body {
 
   padding-left: 10%;
   padding-right: 10%;
+  padding-bottom: 8%;
 }
 
 .task-input {
@@ -89,7 +90,6 @@ button:hover {
 
   display: flex;
   align-items: flex-start;
-
   margin: 1%;
 }
 
@@ -139,6 +139,7 @@ button:hover {
 @media (max-width: 1200px) {
   .boards {
     flex-direction: column;
+    align-items: center;
   }
 
   .single-task {
@@ -162,10 +163,6 @@ button:hover {
   color: #000000;
   text-align: center;
   transition: all 0.2s;
-}
-
-.button-delete {
-  background-image: url("../src/img/delete.png");
 }
 
 .button span {
@@ -192,8 +189,9 @@ button:hover {
 .footer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   grid-area: footer;
   background: rgba(0, 0, 0, 0.158);
   color: white;
+  padding-bottom: ;
 }
