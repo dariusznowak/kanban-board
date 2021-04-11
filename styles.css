@@ -1,5 +1,6 @@
 html {
   font-family: "Montserrat", sans-serif;
+  font-size: 17px;
 }
 body {
   margin: 0px;
@@ -40,6 +41,7 @@ body {
 .boards-container {
   grid-area: boards-container;
   display: grid;
+  justify-content: center;
   grid-template:
     "task-input"
     "boards";
@@ -115,7 +117,11 @@ button:hover {
 }
 
 .task-board {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* display: block; */
   padding-bottom: 1vh;
   /* min-height: 30vw; */
   min-height: 31vw;
@@ -145,7 +151,8 @@ button:hover {
   flex-wrap: wrap;
   justify-content: space-evenly;
   overflow: auto;
-  max-height: 28vw;
+  /* height: 28vw; */
+  max-height: 27.5vw;
 }
 
 .single-task {
@@ -156,9 +163,10 @@ button:hover {
   background-color: #0000008a;
   margin: 2%;
   text-align: center;
-  font-size: 15px;
+
+  /* font-size: 15px; */
+  font-size: clamp(0.5rem, 0.25rem + 1.3281vw, 1rem);
   border-radius: 0.4rem;
-  padding: 1%;
   word-wrap: break-word;
 }
 
@@ -184,7 +192,34 @@ button:hover {
   }
 
   .task-board {
-    min-width: 60vw;
+    width: 92vw;
+    height: 50vh;
+    margin-top: 2vh;
+  }
+
+  .task-input h2 {
+    margin-top: 3vh;
+  }
+
+  .single-task {
+    max-height: 15vw;
+  }
+
+  .board-like {
+    max-height: 50vh;
+  }
+}
+
+@media (max-width: 960px) {
+  .task-board {
+    /* min-width: 95vw;
+    min-height: 70vh; */
+    width: 95vw;
+    height: 70vh;
+    margin-top: 2vh;
+  }
+  .board-like {
+    max-height: 70vh;
   }
 }
 
