@@ -22,9 +22,12 @@ function TaskInput(props) {
           name="task-content"
           rows="3"
           value={inputText}
+          maxlength="300"
         ></textarea>
 
-        <button onClick={submitNote}>Add</button>
+        <button onClick={submitNote} disabled={!inputText || !inputText.trim()}>
+          Add
+        </button>
       </form>
     </div>
   );
