@@ -18,6 +18,7 @@ function TaskInput(props) {
       <form>
         <h2>Create a task</h2>
         <textarea
+          className="text-area-input"
           onChange={handleChange}
           name="task-content"
           rows="3"
