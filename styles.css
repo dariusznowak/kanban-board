@@ -88,7 +88,7 @@ body {
 
 .task-input button {
   font-size: 1rem;
-  border-radius: 0.25em;
+  border-radius: 6px;
   background-color: #00000041;
   color: rgba(255, 255, 255, 0.459);
   height: 40px;
@@ -219,7 +219,7 @@ button:hover {
   }
 
   html {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
@@ -240,13 +240,13 @@ button:hover {
   border: 0.1em solid #000000;
   font-family: "Roboto", sans-serif;
   padding: 0.35em 1.2em;
-  border-radius: 0.12em;
+  border-radius: 6px;
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 300;
   color: #000000;
   text-align: center;
-  transition: all 0.2s;
+  transition: all 0.05s;
 }
 
 .button span {
