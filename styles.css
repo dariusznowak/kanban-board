@@ -227,8 +227,8 @@ button:hover {
   .single-task {
     max-width: 75vw;
     max-height: 60vw;
-    min-width: 48vw;
-    min-height: 23vw;
+    min-width: 26.7vw;
+    min-height: 13.3vw;
   }
   .single-task p {
     max-height: 60vw;
