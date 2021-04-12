@@ -26,7 +26,11 @@ function TaskInput(props) {
           maxlength="300"
         ></textarea>
 
-        <button onClick={submitNote} disabled={!inputText || !inputText.trim()}>
+        <button
+          className="input-button"
+          onClick={submitNote}
+          disabled={!inputText || !inputText.trim()}
+        >
           Add
         </button>
       </form>

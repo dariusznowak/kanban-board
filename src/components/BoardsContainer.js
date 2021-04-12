@@ -1,11 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TaskBoard from "./TaskBoard";
 import TaskInput from "./TaskInput";
 
 function BoardsContainer() {
-  const [toDoTable, setToDoTask] = useState([]);
-  const [inProgressTable, setInProgressTask] = useState([]);
-  const [completedTable, setCompletedTask] = useState([]);
+  const [toDoTable, setToDoTask] = useState(() => {
+    const localStorageData = localStorage.getItem("toDoTable");
+    return localStorageData ? JSON.parse(localStorageData) : [];
+  });
+  const [inProgressTable, setInProgressTask] = useState(() => {
+    const localStorageData = localStorage.getItem("inProgressTable");
+    return localStorageData ? JSON.parse(localStorageData) : [];
+  });
+  const [completedTable, setCompletedTask] = useState(() => {
+    const localStorageData = localStorage.getItem("completedTable");
+    return localStorageData ? JSON.parse(localStorageData) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("toDoTable", JSON.stringify(toDoTable));
+  }, [toDoTable]);
+
+  useEffect(() => {
+    localStorage.setItem("inProgressTable", JSON.stringify(inProgressTable));
+  }, [inProgressTable]);
+
+  useEffect(() => {
+    localStorage.setItem("completedTable", JSON.stringify(completedTable));
+  }, [completedTable]);
 
   function onAddTask(inputText) {
     setToDoTask(() => {
