@@ -165,7 +165,7 @@ button:hover {
   text-align: center;
 
   /* font-size: 15px; */
-  font-size: clamp(0.5rem, 0.25rem + 1.3281vw, 1rem);
+  /* font-size: clamp(0.5rem, 0.25rem + 1.3281vw, 1rem); */
   border-radius: 0.4rem;
   word-wrap: break-word;
 }
@@ -188,7 +188,12 @@ button:hover {
   }
 
   .single-task {
-    max-width: 32vw;
+    max-width: 26vw;
+    max-height: 25vw;
+  }
+
+  .single-task p {
+    max-height: 16vw;
   }
 
   .task-board {
@@ -201,25 +206,34 @@ button:hover {
     margin-top: 3vh;
   }
 
-  .single-task {
-    max-height: 15vw;
-  }
-
   .board-like {
     max-height: 50vh;
   }
 }
 
 @media (max-width: 960px) {
-  .task-board {
-    /* min-width: 95vw;
-    min-height: 70vh; */
+  .single-task {
+    max-width: 40vw;
+  }
+  /* .task-board {
+
     width: 95vw;
     height: 70vh;
     margin-top: 2vh;
   }
   .board-like {
     max-height: 70vh;
+
+  } */
+}
+
+@media (max-width: 630px) {
+  .single-task {
+    max-width: 75vw;
+    max-height: 60vw;
+  }
+  .single-task p {
+    max-height: 60vw;
   }
 }
 
