@@ -71,6 +71,10 @@ body {
   margin-top: 0;
 }
 
+.input-button {
+  backdrop-filter: blur(7px);
+}
+
 .task-input textarea {
   border-radius: 0.4rem;
   border-color: #ffffff88;
