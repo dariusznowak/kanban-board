@@ -2,7 +2,7 @@
 
 Check out [live demo HERE](https://dariusznowak.github.io/kanban-board/)
 
-![alt text](https://github.com/dariusznowak/kanban-board/blob/main/src/img/screenshot.jpg?raw=true)
+![alt text](https://github.com/dariusznowak/kanban-board/blob/main/src/img/screenshot.png?raw=true)
 
 
 In the project directory, you can run:
