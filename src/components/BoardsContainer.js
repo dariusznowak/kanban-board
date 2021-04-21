@@ -30,18 +30,18 @@ function BoardsContainer() {
 
   function onAddTask(inputText) {
     setToDoTask(() => {
-      return [...toDoTable, inputText];
+      return [inputText, ...toDoTable];
     });
   }
 
   function pushToNext(note, boardNameProp) {
     if (boardNameProp === "to-do-board") {
       setInProgressTask(() => {
-        return [...inProgressTable, note];
+        return [note, ...inProgressTable];
       });
     } else if (boardNameProp === "in-progress-board") {
       setCompletedTask(() => {
-        return [...completedTable, note];
+        return [note, ...completedTable];
       });
     }
   }
@@ -49,11 +49,11 @@ function BoardsContainer() {
   function pushToPrevious(note, boardNameProp) {
     if (boardNameProp === "in-progress-board") {
       setToDoTask(() => {
-        return [...toDoTable, note];
+        return [note, ...toDoTable];
       });
     } else if (boardNameProp === "completed-board") {
       setInProgressTask(() => {
-        return [...inProgressTable, note];
+        return [note, ...inProgressTable];
       });
     }
   }
