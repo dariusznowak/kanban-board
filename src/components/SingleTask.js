@@ -1,4 +1,6 @@
 import React from "react";
+import { useDrag } from "react-dnd";
+import { ItemTypes } from "../utils/items";
 
 function SingleTask(props) {
   function handleNextButton() {
@@ -15,8 +17,21 @@ function SingleTask(props) {
     props.deleteFun(props.id, props.data);
   }
 
+  /*drag and drop - useDrag() */
+  const [{ isDragging }, drag] = useDrag({
+    type: ItemTypes.CARD /*deklaracja typu tego co wróci*/,
+    collect: (monitor) => ({
+      //funkcja collect sprawi, że gdy isDragging jest true to doda ona propa do komponentu (wyżej)
+      isDragging: !!monitor.isDragging(), //monitor has a prop isDragging, which is true <=> gdy tylko ten item is dragged
+    }),
+  });
+
   return (
-    <div className="single-task">
+    <div
+      className="single-task"
+      ref={drag}
+      style={{ opacity: isDragging ? "0.1" : "1" }}
+    >
       <p>{props.content}</p>
       <div className="single-task-buttons-box">
         {(props.data === "to-do-board" ||
