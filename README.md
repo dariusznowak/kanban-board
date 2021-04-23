@@ -5,7 +5,7 @@ This app was created using **React.js** library.<br>
 It's fully resposive which I managed to achieve by using **CSS Grid** and **CSS Flexbox** modules.<br>
 Drag and drop feature was developed using **react-dnd** package. 
 
-Check out [live demo HERE](https://dariusznowak.github.io/kanban-board/)
+<br>**Check out [live demo HERE](https://dariusznowak.github.io/kanban-board/)**
 
 ![alt text](https://github.com/dariusznowak/kanban-board/blob/main/src/img/screenshot.png?raw=true)
 
