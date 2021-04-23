@@ -94,7 +94,6 @@ function BoardsContainer() {
         return [content, ...completedTable];
       });
     }
-    console.log("jestem w moveTask()   " + content + "   " + whereToMove);
   }
 
   return (
