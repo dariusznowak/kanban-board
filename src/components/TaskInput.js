@@ -23,7 +23,7 @@ function TaskInput(props) {
           name="task-content"
           rows="3"
           value={inputText}
-          maxlength="300"
+          maxLength="300"
         ></textarea>
 
         <button
