@@ -1,12 +1,16 @@
-# Kanban Board project using React.js
-Create your own tasks and manage them. You can use buttons or you can drag the tasks between taskboards using your mouse. Drag and drop feature was developed using react-dnd package. Your tasks will be saved in your browser's local storage so you can check them out any time you want to. 
+# Kanban Board project
+Create your own tasks and manage them. You can use buttons or you can drag the tasks between taskboards using your mouse. Your tasks will be saved in your browser's **local storage** so you can check them out any time you want to.
+
+This app was created using **React.js** library.<br>
+It's fully resposive which I managed to achieve by using **CSS Grid** and **CSS Flexbox** modules.<br>
+Drag and drop feature was developed using **react-dnd** package. 
 
 Check out [live demo HERE](https://dariusznowak.github.io/kanban-board/)
 
 ![alt text](https://github.com/dariusznowak/kanban-board/blob/main/src/img/screenshot.png?raw=true)
 
 
-In the project directory, you can run:
+<br>In the project directory, you can run:
 
 
 ### `npm start`
