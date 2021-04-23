@@ -59,7 +59,6 @@ function BoardsContainer() {
   }
 
   function deleteNote(id, boardNameProp) {
-    console.log("klik");
     if (boardNameProp === "to-do-board") {
       setToDoTask((prevNotes) => {
         return prevNotes.filter((noteItem, index) => {
@@ -81,6 +80,23 @@ function BoardsContainer() {
     }
   }
 
+  function moveTask(content, whereToMove) {
+    if (whereToMove === "to-do-board") {
+      setToDoTask(() => {
+        return [content, ...toDoTable];
+      });
+    } else if (whereToMove === "in-progress-board") {
+      setInProgressTask(() => {
+        return [content, ...inProgressTable];
+      });
+    } else if (whereToMove === "completed-board") {
+      setCompletedTask(() => {
+        return [content, ...completedTable];
+      });
+    }
+    console.log("jestem w moveTask()   " + content + "   " + whereToMove);
+  }
+
   return (
     <div className="boards-container">
       <TaskInput onAddTask={onAddTask} />
@@ -91,6 +107,7 @@ function BoardsContainer() {
           pushNext={pushToNext}
           deleteFun={deleteNote}
           pushToPrevious={pushToPrevious}
+          moveTask={moveTask}
           data="to-do-board"
           headingText={"To do"}
         />
@@ -99,6 +116,7 @@ function BoardsContainer() {
           pushNext={pushToNext}
           deleteFun={deleteNote}
           pushToPrevious={pushToPrevious}
+          moveTask={moveTask}
           data="in-progress-board"
           headingText={"In progress"}
         />
@@ -107,6 +125,7 @@ function BoardsContainer() {
           pushNext={pushToNext}
           deleteFun={deleteNote}
           pushToPrevious={pushToPrevious}
+          moveTask={moveTask}
           data="completed-board"
           headingText={"Completed"}
         />
