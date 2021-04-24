@@ -117,8 +117,6 @@ button:hover {
 
   margin: 1%;
   background: rgba(255, 255, 255, 0.226);
-  /* background: rgba(124, 124, 124, 0.226); */
-
   backdrop-filter: blur(5px);
 
   color: white;
@@ -141,7 +139,7 @@ button:hover {
   justify-content: space-evenly;
   align-items: center;
   overflow: auto;
-  max-height: 27.5vw;
+  max-height: 25.9vw;
 }
 
 .single-task {
@@ -245,7 +243,6 @@ button:hover {
   font-weight: 300;
   color: #000000;
   text-align: center;
-  transition: all 0.05s;
 }
 
 .button span {
@@ -281,7 +278,6 @@ button:hover {
   align-items: flex-end;
   grid-area: footer;
   color: white;
-
   width: 100%;
 }
 
@@ -290,7 +286,7 @@ button:hover {
 .text-area-input::-webkit-scrollbar-track,
 .board-like::-webkit-scrollbar-track,
 .single-task p::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   background-color: #ffffff86;
 }
@@ -304,6 +300,6 @@ button:hover {
 .board-like::-webkit-scrollbar-thumb,
 .single-task p::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: #555;
 }
