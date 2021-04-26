@@ -1,4 +1,5 @@
 # Kanban Board project
+## Features
 Create your own tasks and manage them. You can use buttons or you can drag the tasks between taskboards using your mouse. Your tasks will be saved in your browser's memory so you can check them out any time you want to.
 
 ## Development
