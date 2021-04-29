@@ -1,20 +1,20 @@
 import React from "react";
 import { useDrag } from "react-dnd";
 
-function SingleTask(props) {
-  function handleNextButton() {
+const SingleTask = (props) => {
+  const handleNextButton = () => {
     props.pushNext(props.taskTab[props.id], props.data);
     props.deleteFun(props.id, props.data);
-  }
+  };
 
-  function handleDeleteButton() {
+  const handleDeleteButton = () => {
     props.deleteFun(props.id, props.data);
-  }
+  };
 
-  function handleBackButton() {
+  const handleBackButton = () => {
     props.pushToPrevious(props.taskTab[props.id], props.data);
     props.deleteFun(props.id, props.data);
-  }
+  };
 
   /*drag and drop - useDrag() */
   const [{ isDragging }, drag] = useDrag({
@@ -58,6 +58,6 @@ function SingleTask(props) {
       </div>
     </div>
   );
-}
+};
 
 export default SingleTask;

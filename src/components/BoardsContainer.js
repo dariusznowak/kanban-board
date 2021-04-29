@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TaskBoard from "./TaskBoard";
 import TaskInput from "./TaskInput";
 
-function BoardsContainer() {
+const BoardsContainer = () => {
   const [toDoTable, setToDoTask] = useState(() => {
     const localStorageData = localStorage.getItem("toDoTable");
     return localStorageData ? JSON.parse(localStorageData) : [];
@@ -28,13 +28,13 @@ function BoardsContainer() {
     localStorage.setItem("completedTable", JSON.stringify(completedTable));
   }, [completedTable]);
 
-  function onAddTask(inputText) {
+  const onAddTask = (inputText) => {
     setToDoTask(() => {
       return [inputText, ...toDoTable];
     });
-  }
+  };
 
-  function pushToNext(note, boardNameProp) {
+  const pushToNext = (note, boardNameProp) => {
     if (boardNameProp === "to-do-board") {
       setInProgressTask(() => {
         return [note, ...inProgressTable];
@@ -44,9 +44,9 @@ function BoardsContainer() {
         return [note, ...completedTable];
       });
     }
-  }
+  };
 
-  function pushToPrevious(note, boardNameProp) {
+  const pushToPrevious = (note, boardNameProp) => {
     if (boardNameProp === "in-progress-board") {
       setToDoTask(() => {
         return [note, ...toDoTable];
@@ -56,9 +56,9 @@ function BoardsContainer() {
         return [note, ...inProgressTable];
       });
     }
-  }
+  };
 
-  function deleteNote(id, boardNameProp) {
+  const deleteNote = (id, boardNameProp) => {
     if (boardNameProp === "to-do-board") {
       setToDoTask((prevNotes) => {
         return prevNotes.filter((noteItem, index) => {
@@ -78,9 +78,9 @@ function BoardsContainer() {
         });
       });
     }
-  }
+  };
 
-  function moveTask(content, whereToMove) {
+  const moveTask = (content, whereToMove) => {
     if (whereToMove === "to-do-board") {
       setToDoTask(() => {
         return [content, ...toDoTable];
@@ -94,7 +94,7 @@ function BoardsContainer() {
         return [content, ...completedTable];
       });
     }
-  }
+  };
 
   return (
     <div className="boards-container">
@@ -131,6 +131,6 @@ function BoardsContainer() {
       </div>
     </div>
   );
-}
+};
 
 export default BoardsContainer;

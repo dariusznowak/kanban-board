@@ -1,11 +1,11 @@
 import React from "react";
 
-function Footer() {
+const Footer = () => {
   return (
     <footer className="footer">
       <p>Copyright ⓒ {new Date().getFullYear() + " Dariusz Nowak"}</p>
     </footer>
   );
-}
+};
 
 export default Footer;

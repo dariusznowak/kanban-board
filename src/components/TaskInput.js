@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
-function TaskInput(props) {
+const TaskInput = (props) => {
   const [inputText, setInputText] = useState("");
 
-  function handleChange(event) {
+  const handleChange = (event) => {
     setInputText(event.target.value);
-  }
+  };
 
-  function submitNote(event) {
+  const submitNote = (event) => {
     props.onAddTask(inputText);
     event.preventDefault();
     setInputText("");
-  }
+  };
 
   return (
     <div className="task-input">
@@ -36,6 +36,6 @@ function TaskInput(props) {
       </form>
     </div>
   );
-}
+};
 
 export default TaskInput;

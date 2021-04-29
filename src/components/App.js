@@ -5,7 +5,7 @@ import BoardsContainer from "./BoardsContainer";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
-function App() {
+const App = () => {
   return (
     <DndProvider backend={HTML5Backend}>
       <div className="app">
@@ -15,6 +15,6 @@ function App() {
       </div>
     </DndProvider>
   );
-}
+};
 
 export default App;

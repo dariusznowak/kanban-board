@@ -2,7 +2,7 @@ import React from "react";
 import { useDrop } from "react-dnd";
 import SingleTask from "./SingleTask";
 
-function TaskBoard(props) {
+const TaskBoard = (props) => {
   //funkcja do aktualizacji tablic tasków przy drag-drop
   function moveTaskToDropzone(id, boardName, content) {
     props.moveTask(content, props.data);
@@ -49,6 +49,6 @@ function TaskBoard(props) {
       </div>
     </div>
   );
-}
+};
 
 export default TaskBoard;
