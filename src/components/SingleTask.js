@@ -35,25 +35,25 @@ const SingleTask = (props) => {
 
   return (
     <div
-      className="single-task"
+      className="singleTask"
       ref={drag}
       style={{ opacity: isDragging ? "0.1" : "1" }}
     >
-      <p>{props.content}</p>
-      <div className="single-task-buttons-box">
+      <p className="singleTask__content">{props.content}</p>
+      <div className="singleTask__buttonsBox">
         {(props.data === "to-do-board" ||
           props.data === "in-progress-board") && (
-          <button className="button" onClick={handleNextButton}>
+          <button className="singleTask__button" onClick={handleNextButton}>
             <span className="fas fa-check" />
           </button>
         )}
         {(props.data === "in-progress-board" ||
           props.data === "completed-board") && (
-          <button className="button" onClick={handleBackButton}>
+          <button className="singleTask__button" onClick={handleBackButton}>
             <span className="fas fa-backward" />
           </button>
         )}
-        <button className="button" onClick={handleDeleteButton}>
+        <button className="singleTask__button" onClick={handleDeleteButton}>
           <span className="far fa-trash-alt" />
         </button>
       </div>

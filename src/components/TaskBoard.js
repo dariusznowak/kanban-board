@@ -25,14 +25,15 @@ const TaskBoard = (props) => {
 
   return (
     <div
-      className="task-board"
+      className="taskBoard"
       ref={drop}
       style={{ background: isOver && "rgba(77, 77, 77, 0.426)" }}
     >
-      <div className="task-board-heading">
-        <h1>{props.headingText}</h1>
+      {/* <div className="task-board-heading"> */}
+      <div className="taskBoard__header">
+        <h1 className="taskBoard__headerText">{props.headingText}</h1>
       </div>
-      <div className={"board-like " + props.data}>
+      <div className={"taskBoard__taskList " + props.data}>
         {props.taskTab.map((noteItem, index) => {
           return (
             <SingleTask

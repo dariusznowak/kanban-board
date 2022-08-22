@@ -1,66 +1,73 @@
-.task-input {
-  grid-area: task-input;
+.taskInput {
+  grid-area: taskInput;
   text-align: center;
   color: white;
-}
 
-.task-input form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
+  & > form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.task-input h2 {
-  flex-basis: 100%;
-  margin-top: 0;
-}
-.task-input textarea {
-  border: 1px solid #ffffff88;
-  border-radius: 0.4rem;
-  background: rgba(0, 0, 0, 0.24);
-  width: 200px;
-  height: 50px;
-  font-family: "Montserrat", sans-serif;
-  color: white;
-}
+  &__text {
+    flex-basis: 100%;
+    margin-top: 0;
+  }
 
-.task-input textarea:active {
-  border-color: #ffffffd3;
-}
+  &__textArea {
+    border: 1px solid #ffffff88;
+    border-radius: 0.4rem;
+    background: rgba(0, 0, 0, 0.24);
+    width: 200px;
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+  }
 
-.task-input button {
-  font-size: 1rem;
-  border-radius: 6px;
-  background-color: #00000041;
-  color: rgba(255, 255, 255, 0.459);
-  height: 40px;
-  width: 60px;
-  border: 1px solid rgb(168, 168, 168);
-  margin-top: 0.6%;
-  backdrop-filter: blur(7px);
-}
+  &__textArea:active {
+    border-color: #ffffffd3;
+  }
 
-.task-input input,
-button:hover {
-  background: rgba(0, 0, 0, 0.39);
-  color: rgba(255, 255, 255, 0.774);
-  border-color: rgb(255, 255, 255);
-  border-style: solid;
-}
+  &__button {
+    font-size: 1rem;
+    border-radius: 6px;
+    background-color: #00000041;
+    color: rgba(255, 255, 255, 0.459);
+    height: 40px;
+    width: 60px;
+    border: 1px solid rgb(168, 168, 168);
+    margin-top: 0.6%;
+    backdrop-filter: blur(7px);
+  }
 
-.text-area-input::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #ffffff86;
-}
-.text-area-input::-webkit-scrollbar {
-  width: 12px;
-}
+  &__button:hover {
+    background: rgba(0, 0, 0, 0.39);
+    color: rgba(255, 255, 255, 0.774);
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+  }
 
-.text-area-input::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #555;
+  &__textArea::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #ffffff86;
+  }
+
+  &__textArea::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &__textArea::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
+  }
+
+  @media (max-width: 1200px) {
+    &__text {
+      margin-top: 3vh;
+    }
+  }
 }
