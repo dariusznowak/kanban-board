@@ -1,0 +1,26 @@
+.boards-container {
+  grid-area: boards-container;
+  display: grid;
+  justify-content: center;
+  grid-template:
+    "task-input"
+    "boards";
+
+  padding: 0 10%;
+}
+
+.boards {
+  grid-area: boards;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 1%;
+}
+
+@media (max-width: 1200px) {
+  .boards {
+    flex-direction: column;
+    align-items: center;
+  }
+}

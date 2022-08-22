@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import BoardsContainer from "./BoardsContainer";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import "../styles/App.scss";
 
 const App = () => {
   return (

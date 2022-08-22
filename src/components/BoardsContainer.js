@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TaskBoard from "./TaskBoard";
 import TaskInput from "./TaskInput";
+import "../styles/BoardsContainer.scss";
 
 const BoardsContainer = () => {
   const [toDoTable, setToDoTask] = useState(() => {

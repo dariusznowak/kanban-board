@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/TaskInput.scss";
 
 const TaskInput = (props) => {
   const [inputText, setInputText] = useState("");
@@ -26,11 +27,7 @@ const TaskInput = (props) => {
           maxLength="300"
         ></textarea>
 
-        <button
-          className="input-button"
-          onClick={submitNote}
-          disabled={!inputText || !inputText.trim()}
-        >
+        <button onClick={submitNote} disabled={!inputText || !inputText.trim()}>
           Add
         </button>
       </form>

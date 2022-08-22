@@ -1,6 +1,7 @@
 import React from "react";
 import { useDrop } from "react-dnd";
 import SingleTask from "./SingleTask";
+import "../styles/TaskBoard.scss";
 
 const TaskBoard = (props) => {
   //funkcja do aktualizacji tablic tasków przy drag-drop

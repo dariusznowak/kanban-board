@@ -1,0 +1,69 @@
+.task-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 1vh;
+  min-height: 29.4vw;
+  min-width: 25vw;
+
+  margin: 1%;
+  background: rgba(255, 255, 255, 0.226);
+  backdrop-filter: blur(5px);
+
+  color: white;
+  border-radius: 7px;
+  box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.507);
+}
+
+.task-board-heading {
+  min-width: 100%;
+  text-align: center;
+}
+
+.task-board h1 {
+  margin: 1.5%;
+  margin-bottom: 2%;
+}
+
+@media (max-width: 1200px) {
+  .task-board {
+    width: 92vw;
+    height: 50vh;
+    margin-top: 2vh;
+  }
+
+  .task-input h2 {
+    margin-top: 3vh;
+  }
+
+  .board-like {
+    max-height: 50vh;
+  }
+}
+
+.board-like {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  /* justify-content: space-evenly; */
+  /* align-items: center; */
+  overflow: auto;
+  max-height: 25.9vw;
+}
+
+.board-like::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #ffffff86;
+}
+
+.board-like::-webkit-scrollbar {
+  width: 12px;
+}
+
+.board-like::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #555;
+}
