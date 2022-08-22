@@ -4,21 +4,25 @@
   background-color: #0000008a;
   margin: 2%;
   text-align: center;
-  width: 100%;
+  max-width: 100%;
+  width: fit-content;
   border-radius: 0.4rem;
-  word-wrap: break-word;
+  // word-wrap: break-word;
 
   &__content {
     width: 100%;
-    overflow: auto;
-    margin-left: 4px;
-    max-height: 8vw;
+    // overflow: auto;
+    // margin-left: 4px;
+    // max-height: 8vw;
+
+    word-break: break-all;
+    text-align: center;
   }
 
   &__buttonsBox {
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    align-items: center;
   }
 
   &__button {
