@@ -20,7 +20,7 @@ const TaskInput = (props) => {
         <h2 className="taskInput__text">Create a task</h2>
 
         <textarea
-          className="taskInput"
+          className="taskInput__textArea"
           onChange={handleChange}
           name="task-content"
           rows="3"
