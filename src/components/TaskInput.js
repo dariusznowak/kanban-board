@@ -15,19 +15,24 @@ const TaskInput = (props) => {
   };
 
   return (
-    <div className="task-input">
+    <div className="taskInput">
       <form>
-        <h2>Create a task</h2>
+        <h2 className="taskInput__text">Create a task</h2>
+
         <textarea
-          className="text-area-input"
+          className="taskInput__textArea"
           onChange={handleChange}
           name="task-content"
           rows="3"
           value={inputText}
           maxLength="300"
-        ></textarea>
+        />
 
-        <button onClick={submitNote} disabled={!inputText || !inputText.trim()}>
+        <button
+          className="taskInput__button"
+          onClick={submitNote}
+          disabled={!inputText || !inputText.trim()}
+        >
           Add
         </button>
       </form>

@@ -3,7 +3,7 @@ import "../styles/Header.scss";
 
 const Header = () => {
   return (
-    <header className="header-component">
+    <header className="header">
       <h1>Kanban board</h1>
     </header>
   );

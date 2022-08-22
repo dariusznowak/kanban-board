@@ -1,113 +1,105 @@
-.single-task {
+.singleTask {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* max-width: 11vw; */
-  /* max-height: 11vw; */
   background-color: #0000008a;
   margin: 2%;
   text-align: center;
-  /* min-width: 10vw; */
   width: 100%;
   border-radius: 0.4rem;
   word-wrap: break-word;
-}
 
-.single-task p {
-  width: 100%;
-  overflow: auto;
-  margin-left: 4px;
-  max-height: 8vw;
-}
-
-@media (max-width: 960px) {
-  .single-task {
-    max-width: 40vw;
-    min-width: 24.6vw;
-    min-height: 8vw;
+  &__content {
+    width: 100%;
+    overflow: auto;
+    margin-left: 4px;
+    max-height: 8vw;
   }
 
-  html {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .single-task {
-    max-width: 26vw;
-    max-height: 25vw;
-    min-width: 16.3vw;
-    min-height: 7.5vw;
+  &__buttonsBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
-  .single-task p {
-    max-height: 16vw;
+  &__button {
+    background-color: #00000041;
+    border: 0.1em solid #000000;
+    font-family: "Roboto", sans-serif;
+    padding: 0.35em 1.2em;
+    border-radius: 6px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: #000000;
+    text-align: center;
   }
-}
 
-@media (max-width: 630px) {
-  .single-task {
-    max-width: 75vw;
-    max-height: 60vw;
-    min-width: 26.7vw;
-    min-height: 13.3vw;
+  &__button > span {
+    color: rgba(255, 255, 255, 0.493);
+    font-size: 1rem;
   }
-  .single-task p {
-    max-height: 60vw;
+
+  &__button:hover {
+    background-color: #00000079;
   }
-}
 
-.single-task .button {
-  background-color: #00000041;
-  border: 0.1em solid #000000;
-  font-family: "Roboto", sans-serif;
-  padding: 0.35em 1.2em;
-  border-radius: 6px;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-weight: 300;
-  color: #000000;
-  text-align: center;
-}
+  &__button:hover .far {
+    color: rgb(255, 0, 0);
+  }
+  &__button:hover .fa-backward {
+    color: rgb(255, 238, 0);
+  }
 
-.single-task-buttons-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
+  &__button:hover .fa-check {
+    color: rgb(21, 255, 0);
+  }
 
-.single-task button:hover {
-  background-color: #00000079;
-}
+  &__content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #ffffff86;
+  }
 
-.single-task button:hover .far {
-  color: rgb(255, 0, 0);
-}
-.single-task button:hover .fa-backward {
-  color: rgb(255, 238, 0);
-}
+  &__content::-webkit-scrollbar {
+    width: 12px;
+  }
 
-.single-task button:hover .fa-check {
-  color: rgb(21, 255, 0);
-}
+  &__content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
+  }
 
-.single-task p::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #ffffff86;
-}
+  @media (max-width: 960px) {
+    & {
+      max-width: 40vw;
+      min-width: 24.6vw;
+      min-height: 8vw;
+    }
+  }
 
-.single-task p::-webkit-scrollbar {
-  width: 12px;
-}
+  @media (max-width: 1200px) {
+    & {
+      max-width: 26vw;
+      max-height: 25vw;
+      min-width: 16.3vw;
+      min-height: 7.5vw;
+    }
 
-.single-task p::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #555;
-}
+    &__content {
+      max-height: 16vw;
+    }
+  }
 
-.button span {
-  color: rgba(255, 255, 255, 0.493);
-  font-size: 1rem;
+  @media (max-width: 630px) {
+    & {
+      max-width: 75vw;
+      max-height: 60vw;
+      min-width: 26.7vw;
+      min-height: 13.3vw;
+    }
+    &__content {
+      max-height: 60vw;
+    }
+  }
 }

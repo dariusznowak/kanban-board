@@ -1,4 +1,4 @@
-.task-board {
+.taskBoard {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,56 +14,52 @@
   color: white;
   border-radius: 7px;
   box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.507);
-}
 
-.task-board-heading {
-  min-width: 100%;
-  text-align: center;
-}
-
-.task-board h1 {
-  margin: 1.5%;
-  margin-bottom: 2%;
-}
-
-@media (max-width: 1200px) {
-  .task-board {
-    width: 92vw;
-    height: 50vh;
-    margin-top: 2vh;
+  &__header {
+    min-width: 100%;
+    text-align: center;
   }
 
-  .task-input h2 {
-    margin-top: 3vh;
+  &__headerText {
+    margin: 1.5%;
+    margin-bottom: 2%;
   }
 
-  .board-like {
-    max-height: 50vh;
+  &__taskList {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* justify-content: space-evenly; */
+    /* align-items: center; */
+    overflow: auto;
+    max-height: 25.9vw;
   }
-}
 
-.board-like {
-  display: flex;
-  flex-direction: column;
-  /* flex-wrap: wrap; */
-  /* justify-content: space-evenly; */
-  /* align-items: center; */
-  overflow: auto;
-  max-height: 25.9vw;
-}
+  @media (max-width: 1200px) {
+    .taskBoard {
+      width: 92vw;
+      height: 50vh;
+      margin-top: 2vh;
+    }
 
-.board-like::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  background-color: #ffffff86;
-}
+    &__taskList {
+      max-height: 50vh;
+    }
+  }
 
-.board-like::-webkit-scrollbar {
-  width: 12px;
-}
+  &__taskList::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #ffffff86;
+  }
 
-.board-like::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #555;
+  &__taskList::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &__taskList::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #555;
+  }
 }

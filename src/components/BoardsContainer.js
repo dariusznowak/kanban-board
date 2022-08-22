@@ -98,10 +98,10 @@ const BoardsContainer = () => {
   };
 
   return (
-    <div className="boards-container">
+    <div className="home">
       <TaskInput onAddTask={onAddTask} />
 
-      <div className="boards">
+      <div className="home__boards">
         <TaskBoard
           taskTab={toDoTable}
           pushNext={pushToNext}
