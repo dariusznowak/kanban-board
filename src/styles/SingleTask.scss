@@ -4,17 +4,14 @@
   background-color: #0000008a;
   margin: 2%;
   text-align: center;
-  max-width: 100%;
+  max-width: 300px;
   width: fit-content;
   border-radius: 0.4rem;
-  // word-wrap: break-word;
+  padding-left: 7px;
+  padding-right: 7px;
 
   &__content {
     width: 100%;
-    // overflow: auto;
-    // margin-left: 4px;
-    // max-height: 8vw;
-
     word-break: break-all;
     text-align: center;
   }
@@ -72,38 +69,5 @@
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #555;
-  }
-
-  @media (max-width: 960px) {
-    & {
-      max-width: 40vw;
-      min-width: 24.6vw;
-      min-height: 8vw;
-    }
-  }
-
-  @media (max-width: 1200px) {
-    & {
-      max-width: 26vw;
-      max-height: 25vw;
-      min-width: 16.3vw;
-      min-height: 7.5vw;
-    }
-
-    &__content {
-      max-height: 16vw;
-    }
-  }
-
-  @media (max-width: 630px) {
-    & {
-      max-width: 75vw;
-      max-height: 60vw;
-      min-width: 26.7vw;
-      min-height: 13.3vw;
-    }
-    &__content {
-      max-height: 60vw;
-    }
   }
 }

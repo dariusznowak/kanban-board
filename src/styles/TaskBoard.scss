@@ -3,11 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-bottom: 1vh;
-  min-height: 29.4vw;
-  min-width: 25vw;
+  height: 55vh;
+  width: 27vw;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 1vh;
 
   margin: 1%;
   background: rgba(255, 255, 255, 0.226);
@@ -29,24 +29,20 @@
 
   &__taskList {
     display: flex;
-    // flex-direction: column;
-    // overflow: auto;
-    // max-height: 25.9vw;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
+    align-items: flex-start;
+    // max-height: 28vw;
     width: 100%;
+
+    overflow-y: auto;
   }
 
-  @media (max-width: 1200px) {
-    .taskBoard {
-      width: 92vw;
-      height: 50vh;
+  @media (max-width: 1250px) {
+    & {
+      width: 80vw;
+      height: 55vh;
       margin-top: 2vh;
-    }
-
-    &__taskList {
-      max-height: 50vh;
     }
   }
 
