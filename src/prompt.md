@@ -36,7 +36,7 @@ The following sections help you set up and use tracing, monitoring, and observab
   </Card>
 </Columns>
 
-For terminology definitions and core concepts, refer to [Observability concepts](/langsmith/observability-concepts).
+For terminology definitions and core concepts, refer to [Observability concepts](/observability-concepts).
 
 <Callout type="info" icon="feather">
   Use **[Polly](/langsmith/polly)**, LangSmith's AI assistant, to analyze traces and get AI-powered insights into your application's performance.
